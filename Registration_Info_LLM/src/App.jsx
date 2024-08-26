@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import Navbar from './components/Navbar.jsx';
 import MainContent from './components/MainContent.jsx';
@@ -9,7 +8,7 @@ function App() {
   const [showChatbot, setShowChatbot] = useState(false);
 
   const handleSignInSuccess = () => {
-    // Perform any additional actions upon successful sign-in here
+    // Additional actions on successful sign-in
   };
 
   const handleLoginSuccess = () => {
@@ -23,7 +22,7 @@ function App() {
         <div className="left-section">
           <MainContent />
         </div>
-        <div className="right-section">
+        <div className={`right-section ${showChatbot ? 'chatbot-visible' : ''}`}>
           {showChatbot && <Chatbot />}
         </div>
       </div>
