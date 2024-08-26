@@ -1,0 +1,38 @@
+.main-content {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+  border-radius: 8px;
+  border: 3px solid black;
+  box-shadow: 0 4px 8px rgba(68, 63, 63, 0.1);
+  width: 800px;
+}
+
+.main-content h1 {
+  font-size: 1.3em;
+  margin-bottom: 7px;
+  color:rgb(6, 6, 10);
+}
+
+.main-content p {
+  font-size: 1.1em;
+  line-height: 1.1;
+  margin-bottom: 14px;
+  color:black;
+}
+
+.main-content h2 {
+  font-size: 1.2em;
+  margin-top: 2px;
+  margin-bottom: 10px;
+  color:rgb(3, 3, 4);
+}
+
+.main-content ul {
+  list-style-type: disc;
+  padding-left: 15px;
+}
+
+.main-content ul li {
+  margin-bottom: 8px;
+  font-size: 1em;
+}
