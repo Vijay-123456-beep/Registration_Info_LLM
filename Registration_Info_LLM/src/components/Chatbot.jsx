@@ -7,7 +7,7 @@ const Chatbot = () => {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
   const chatContainerRef = useRef(null);
-  const LLM_URL = 'https://4100-34-125-123-20.ngrok-free.app/query';
+  const LLM_URL = 'https://ec35-34-19-117-135.ngrok-free.app/query';
 
   useEffect(() => {
     if (chatContainerRef.current) {
