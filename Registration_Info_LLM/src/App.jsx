@@ -7,7 +7,7 @@ import './App.css';
 
 function App() {
   const [showChatbot, setShowChatbot] = useState(false);
-
+  const [isModalOpen, setIsModalOpen] = useState(false); 
   const handleSignInSuccess = () => {
     // Additional actions on successful sign-in
   };
@@ -16,9 +16,17 @@ function App() {
     setShowChatbot(true); // Show Chatbot after successful login
   };
 
+  const handleModalStateChange = (state) => {
+    setIsModalOpen(state); // Function to update modal state
+  };
+
   return (
-    <div className="App">
-      <Navbar onSignInSuccess={handleSignInSuccess} onLoginSuccess={handleLoginSuccess} />
+    <div className={`App ${isModalOpen ? 'modal-open' : ''}`}> 
+      <Navbar 
+        onSignInSuccess={handleSignInSuccess} 
+        onLoginSuccess={handleLoginSuccess} 
+        onModalStateChange={handleModalStateChange} // Pass this function as a prop
+      />
       <div className="content-container">
         <MainContent />
         {showChatbot && <Chatbot />}
@@ -26,5 +34,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;

@@ -1,48 +1,114 @@
 /* General container for content */
 .content-container {
   display: flex;
-  padding: 20px;
+  padding: 2rem;
+  gap: 2rem;
+  min-height: 100vh;
+  background-color: #f7fafc;
 }
 
 /* Left section (Main Content) */
 .left-section {
   flex: 3;
-  background-color: #f5f5f5;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.left-section:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* Chatbot container */
 .chat-container {
-  flex-grow: 1; /* Ensures that the chatbot takes up all available space */
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 /* Chatbot header */
 .chat-header {
-  background-color: #333;
+  background-color: #2d3748;
   color: white;
-  padding: 10px;
+  padding: 1rem;
   text-align: center;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 /* Chatbot body */
 .chat-body {
   flex: 1;
-  padding: 10px;
+  padding: 1.5rem;
   overflow-y: auto;
-  background-color: #f1f1f1;
+  background-color: #f7fafc;
 }
 
 /* Chatbot input container */
 .chat-input-container {
   display: flex;
-  padding: 10px;
-  background-color: #fff;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
+  padding: 1rem;
+  background-color: #ffffff;
+  border-top: 1px solid #e2e8f0;
+  gap: 1rem;
+}
+
+/* Add smooth scrolling to chat body */
+.chat-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chat-body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.chat-body::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 4px;
+}
+
+.chat-body::-webkit-scrollbar-thumb:hover {
+  background: #a0aec0;
+}
+
+/* Add responsive design */
+@media (max-width: 768px) {
+  .content-container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .left-section {
+    width: 100%;
+  }
+
+  .chat-container {
+    width: 100%;
+  }
+}
+
+/* Add loading animation */
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.loading {
+  animation: pulse 1.5s infinite;
 }
