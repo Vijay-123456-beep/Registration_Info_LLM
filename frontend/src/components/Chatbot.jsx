@@ -9,7 +9,7 @@ const Chatbot = () => {
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const chatContainerRef = useRef(null);
-  const LLM_URL = "http://localhost:5000/query";
+  const LLM_URL = import.meta.env.VITE_API_URL || "http://localhost:5000/query";
   //const LLM_URL = "https://f495-183-82-51-10.ngrok-free.app/query";
 
 

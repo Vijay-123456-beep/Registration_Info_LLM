@@ -1,0 +1,41 @@
+# ========================
+# Node.js (Frontend & Backend)
+# ========================
+node_modules/
+dist/
+dist-ssr/
+build/
+.npm/
+
+# ========================
+# Python & Machine Learning
+# ========================
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+
+# Exclude sensitive model notebooks
+llm-workspace/Cleaned_RAG_Final.ipynb
+llm-workspace/Final_RAG (2).ipynb
+
+# ========================
+# Security (Critical)
+# ========================
+.env
+.env.*
+!.env.example
+
+# ========================
+# Logs & Editor Files
+# ========================
+*.log
+npm-debug.log*
+yarn-debug.log*
+.vscode/
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.sln
+*.sw?
